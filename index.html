@@ -66,7 +66,7 @@
 			timer: 2000,
 			str: '出错咯！',
 		};
-		if(String(object) === object) {
+		if(String(object) === object || Number(object) === object ) {
 			obj.str = object;
 		} else if($.isPlainObject(object)) {
 			obj = $.extend(true,obj,object);
@@ -74,7 +74,7 @@
 			console.error('你特么传了个啥？');
 		}
 		var str = $.trim(obj.str) || '出错咯！',
-			timer = obj.timer || 5000; 
+			timer = obj.timer || 2000; 
 	    $('.toast').fadeIn(100);
 	    $('.toast span').html(str);
 	    $('.toast .toast-block').css(obj.cssText).animate({
