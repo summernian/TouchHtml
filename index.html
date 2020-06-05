@@ -65,13 +65,14 @@
 		var obj = {
 			timer: 2000,
 			str: '出错咯！',
+			cssText: {}
 		};
 		if(String(object) === object || Number(object) === object ) {
 			obj.str = object;
 		} else if($.isPlainObject(object)) {
 			obj = $.extend(true,obj,object);
 		} else {
-			console.error('你特么传了个啥？');
+			console.error('Are You out of your mind?Look what you’ve done!');
 		}
 		var str = $.trim(obj.str) || '出错咯！',
 			timer = obj.timer || 2000; 
