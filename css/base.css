@@ -19,7 +19,7 @@ li {
 a,
 a:focus,
 a:hover {
-	text-decoration:none;
+	text-decoration:none!important;
 }
 .placeholder-r {
 	text-align: right;
@@ -78,6 +78,13 @@ input {
 }
 .clearFix {
     *zoom: 1;
+}
+/* 浮动 */
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
 }
 /* 内联居中 */
 .dv {
